@@ -676,14 +676,6 @@ def clock():
     
     root.mainloop()
 
-def powerpoint():
-    brows = Tk()
-    brows.title("PowerPoint")
-    website = tw.HtmlFrame(brows)
-    website.load_website("https://slidebean.com/")
-    website.pack(fill="both", expand=1)
-    brows.mainloop()
-
 def browser():
     brows = Tk()
     brows.title("InterSurfer")
@@ -1208,7 +1200,7 @@ start_bar.pack(expand=1)
 
 x = StringVar()
 start_bt = Button(oswindows, text="Start", bg="#232323", fg="white", command=start)
-start_bt.place(x=0, y=710)
+start_bt.pack(anchor = "w", side = "bottom")
 
 builtinidebtimage = PhotoImage(file="IDE.png")
 x = StringVar()
@@ -1237,13 +1229,6 @@ file_explorerbt = Button(oswindows, image=file_explorerbtimage, command=file_exp
 file_explorerbt.place(x=500, y=50)
 file_explorerlabel = Label(oswindows, text="File Explorer")
 file_explorerlabel.place(x=490, y=130)
-
-powerpointbtimage = PhotoImage(file="Powerpoint.png")
-x = StringVar()
-powerpointbt = Button(oswindows, image=powerpointbtimage, command=powerpoint)
-powerpointbt.place(x=650, y=50)
-powerpointlabel = Label(oswindows, text="Powerpoint")
-powerpointlabel.place(x=650, y=130)
 
 def shutdown():
     oswindows.destroy()
